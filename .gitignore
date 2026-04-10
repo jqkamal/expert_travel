@@ -1,0 +1,7 @@
+﻿node_modules/
+.pnpm-store/
+.env
+.env.local
+dist/
+build/
+.vite-temp/

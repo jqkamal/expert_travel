@@ -4,26 +4,17 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
+// Get environment variables with fallbacks for Netlify
 const rawPort = process.env.PORT;
+const rawBasePath = process.env.BASE_PATH;
 
-if (!rawPort) {
-  throw new Error(
-    "PORT environment variable is required but was not provided.",
-  );
-}
+// Use environment variables or fallbacks
+const port = rawPort ? Number(rawPort) : 3000;
+const basePath = rawBasePath || "/";
 
-const port = Number(rawPort);
-
+// Validate port
 if (Number.isNaN(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
-}
-
-const basePath = process.env.BASE_PATH;
-
-if (!basePath) {
-  throw new Error(
-    "BASE_PATH environment variable is required but was not provided.",
-  );
 }
 
 export default defineConfig({

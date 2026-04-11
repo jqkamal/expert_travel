@@ -3,10 +3,10 @@ import { Headphones, CreditCard, FileCheck, CalendarCheck } from "lucide-react";
 
 export default function FeaturesBar() {
   const features = [
-    { icon: Headphones, text: "24/7 CUSTOMER\nSUPPORT" },
-    { icon: CreditCard, text: "REDEEM DNATA POINTS" },
-    { icon: FileCheck, text: "EASY PAYMENT PLANS" },
-    { icon: CalendarCheck, text: "FLEXIBLE BOOKINGS" },
+    { icon: Headphones, text: "Personalized Travel Solutions" },
+    { icon: CreditCard, text: "Best Travel Deals with Expert Guidance" },
+    { icon: FileCheck, text: "End-to-End Travel Support" },
+    { icon: CalendarCheck, text: "Fast & Reliable Service" },
   ];
 
   return (
